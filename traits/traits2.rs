@@ -1,12 +1,12 @@
 // traits2.rs
-// 
+//
 // Your task is to implement the trait
 // `AppendBar' for a vector of strings.
-// 
+//
 // To implement this trait, consider for
 // a moment what it means to 'append "Bar"'
 // to a vector of strings.
-// 
+//
 // No boiler plate code this time,
 // you can do this!
 
@@ -17,6 +17,7 @@ trait AppendBar {
 
 //TODO: Add your code here
 
+<<<<<<< HEAD:traits/traits2.rs
 impl AppendBar for Vec<String> {
     fn append_bar(mut self) -> Self {
         self.push(String::from("Bar"));
@@ -26,6 +27,8 @@ impl AppendBar for Vec<String> {
 
 
 
+=======
+>>>>>>> main:exercises/traits/traits2.rs
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -36,5 +39,4 @@ mod tests {
         assert_eq!(foo.pop().unwrap(), String::from("Bar"));
         assert_eq!(foo.pop().unwrap(), String::from("Foo"));
     }
-
 }

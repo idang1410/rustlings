@@ -1,8 +1,15 @@
 // This powerful wrapper provides the ability to store a positive integer value.
 // Rewrite it using generics so that it supports wrapping ANY type.
 
+<<<<<<< HEAD:generics/generics2.rs
 struct Wrapper<T> {
     value: T
+=======
+// I AM NOT DONE
+
+struct Wrapper {
+    value: u32,
+>>>>>>> main:exercises/generics/generics2.rs
 }
 
 impl<T> Wrapper<T> {
@@ -17,7 +24,7 @@ mod tests {
 
     #[test]
     fn store_u32_in_wrapper() {
-        assert_eq!(Wrapper::new(42).value,  42);
+        assert_eq!(Wrapper::new(42).value, 42);
     }
 
     #[test]

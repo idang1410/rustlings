@@ -16,7 +16,11 @@ impl Package {
         if weight_in_grams <= 0 {
             panic!("fuck");
         } else {
-            return Package {sender_country, recipient_country, weight_in_grams};
+            return Package {
+                sender_country,
+                recipient_country,
+                weight_in_grams,
+            };
         }
     }
 
@@ -47,7 +51,7 @@ mod tests {
     fn create_international_package() {
         let sender_country = String::from("Spain");
         let recipient_country = String::from("Russia");
-        
+
         let package = Package::new(sender_country, recipient_country, 1200);
 
         assert!(package.is_international());
@@ -58,10 +62,15 @@ mod tests {
         let sender_country = String::from("Spain");
         let recipient_country = String::from("Spain");
 
+<<<<<<< HEAD:structs/structs3.rs
         let cents_per_kg = 3000;  
         
+=======
+        let cents_per_kg = ???;
+
+>>>>>>> main:exercises/structs/structs3.rs
         let package = Package::new(sender_country, recipient_country, 1500);
-        
+
         assert_eq!(package.get_fees(cents_per_kg), 4500);
     }
 }
